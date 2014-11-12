@@ -1,0 +1,36 @@
+<script>
+  $(document).ready(function(){
+		$('.open-menu').click(function(){
+      $('.sidemenu').show();
+      $('.open-menu').hide();
+      $('.close-menu-container').show();
+    });
+
+    $('.close-menu-container').click(function(){
+      $('.sidemenu').hide();
+      $('.close-menu-container').hide();
+      $('.open-menu').show();
+    });
+  });
+
+  function nextvid(){
+  	location.reload();
+  };
+</script>
+
+<% if @emotion.name %>
+	<% videos = find_videos(@emotion.name) %> 
+  <% video = videos[rand(0..videos.size-1)] %> 
+  <% name = video.name %>
+  <% file = video.file %>  
+<% else %> 
+	<!-- VIDEO NOT FOUND -->
+<% end %>
+  
+<div id="videoBox">
+<iframe width="1100" height="600" src=http://<%= file %>?rel=0&autoplay=1 frameborder="0" allowfullscreen></iframe> <br/>
+</div>
+<button class="nextBtn" onclick="nextvid()"><i class="fa fa-forward fa-2x"></i></button>
+
+<%= render '/partials/menu' %>
+

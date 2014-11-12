@@ -1,0 +1,137 @@
+<script>
+  $(document).ready(function(){
+
+    var images = '<%= @images_name %>';
+    images = images.split(','); 
+
+
+    $(function(){ 
+      $(".slides").slidesjs({
+        maxWidth: 1000,
+        maxHeight: 625 
+      });
+    });
+
+    $('.gallery-icon').click(function(){
+      $('.default-wrapper').hide();
+      $('.gallery-wrapper').show();
+      $('.gallery-icon').hide();
+      $('.default-container').show();
+    });
+
+    $('.default-container').click(function(){
+      $('.default-wrapper').show();
+      $('.gallery-wrapper').hide();
+      $('.default-container').hide();
+      $('.gallery-icon').show();
+    });
+
+    $('.open-menu').click(function(){
+      $('.sidemenu').show();
+      $('.open-menu').hide();
+      $('.close-menu-container').show();
+    });
+
+    $('.close-menu-container').click(function(){
+      $('.sidemenu').hide();
+      $('.close-menu-container').hide();
+      $('.open-menu').show();
+    });
+  });
+</script>
+
+
+<body>
+  <div class="view-icons">
+    <a href="#"><i class="fa fa-th fa-2x gallery-icon"></i></a>
+    <div class="default-container"><a href="#"><i class="fa fa-square fa-2x default-icon"></i></a></div>
+  </div>
+
+  <div class="default-wrapper">
+    <% if @emotion.name %>
+      <div class="slides default-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+    <% else %> 
+      <!-- IMAGE NOT FOUND -->
+    <% end %>
+  </div>
+
+  <% if @emotion.name %>
+    <div class="gallery-wrapper"> 
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+      <div class="slides gallery-view">
+        <% find_images(@emotion.name).each do |image| %>
+          <img src =<%= image.file %>>
+        <% end %>
+      </div>
+    </div>
+  <% else %> 
+    <!-- IMAGE NOT FOUND -->
+  <% end %>
+
+  <%= render '/partials/menu' %>
+
+  <div class="music-player">
+    <%= render '/partials/soundManager2' %>
+  </div>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

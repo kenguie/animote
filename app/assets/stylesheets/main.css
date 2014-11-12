@@ -1,0 +1,397 @@
+body {
+  margin: 0;
+  padding: 0; }
+
+@media all and (min-width: 0px) {
+  a {
+    text-decoration: none;
+    color: #333; }
+
+  a:hover {
+    text-decoration: none; }
+
+  #wrapper .sign_in, #wrapper .sign_up {
+    width: 200px;
+    height: auto;
+    font-size: 0.65em;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    position: relative;
+    z-index: 50;
+    top: 300px;
+    display: none; }
+
+  #wrapper {
+    width: 90%;
+    height: 480px;
+    margin: 0 auto; }
+    #wrapper nav {
+      width: 100%;
+      height: 30px;
+      font-size: 1em; }
+      #wrapper nav .logo {
+        width: 100%;
+        display: inline-block;
+        padding: 5px;
+        margin: 0 auto;
+        text-align: center; }
+      #wrapper nav .buttons {
+        width: 90%;
+        padding: 5px;
+        text-align: center;
+        position: absolute;
+        z-index: 50;
+        top: 250px; }
+        #wrapper nav .buttons div {
+          display: inline-block;
+          padding-left: 10px;
+          padding-right: 10px; }
+
+  .home_index {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top: 0; }
+    .home_index h1 {
+      font-size: 2em;
+      font-family: impact;
+      text-align: center;
+      margin-bottom: 25px; }
+    .home_index .form {
+      text-align: center;
+      font-size: 1em; }
+      .home_index .form .select {
+        width: 70%;
+        padding: 5px;
+        margin-bottom: 10px; }
+      .home_index .form .radio_button {
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        top: 2px; }
+      .home_index .form #radio_video, .home_index .form #radio_music {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px; }
+      .home_index .form .radio_btn_opt {
+        font-size: 34px;
+        margin-right: 20px;
+        margin-left: 10px; }
+      .home_index .form .hit_button {
+        margin: 10px;
+        width: 32%;
+        margin-top: 40px;
+        background-color: #A612FF; }
+    .home_index .hit_button:hover {
+      background-color: #7D54FF; } }
+@media all and (min-width: 1200px) {
+  .main-nav ul .dropdown-menu .sign_in, .main-nav ul .dropdown-menu .sign_up {
+    width: 200px;
+    height: auto;
+    font-size: 1em;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    float: right;
+    position: relative;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    overflow: auto;
+    display: none; }
+
+  #wrapper {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto; }
+
+  .main-nav {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size: 1.5em;
+    margin: 0 auto;
+    padding-left: 0;
+    top: 0;
+    z-index: 0; }
+    .main-nav ul {
+      padding-left: 0;
+      height: 70px; }
+      .main-nav ul li {
+        list-style: none;
+        display: inline-block; }
+        .main-nav ul li .logo {
+          float: left;
+          margin-left: 15px;
+          padding-top: 5px; }
+      .main-nav ul .signin {
+        float: right;
+        margin-right: 15px;
+        margin-top: 10px; }
+        .main-nav ul .signin #dropdownMenu1 {
+          background-color: rgba(255, 255, 255, 0); }
+        .main-nav ul .signin .sign_out_button {
+          float: right;
+          font-size: 24px;
+          margin-top: 7px; }
+      .main-nav ul .dropdown-menu {
+        margin-right: 10px;
+        padding: 10px;
+        background-color: #fff;
+        height: auto; }
+        .main-nav ul .dropdown-menu .forgot_password {
+          padding-left: 10px;
+          padding-top: 0; }
+
+  .home_index {
+    width: 100%;
+    position: relative;
+    top: 100px; }
+    .home_index h1 {
+      font-size: 5em;
+      font-family: impact;
+      text-align: center; }
+    .home_index .form {
+      font-size: 3em; }
+      .home_index .form .select {
+        width: 30%;
+        padding: 10px;
+        color: #9D9DA1;
+        font-weight: 200; }
+      .home_index .form .radio_button {
+        transform: scale(2);
+        top: -12px; }
+
+  /*----------------- video partial page css ------------------*/
+  #videoBox {
+    text-align: center;
+    vertical-align: middle;
+    padding-bottom: 25px;
+    margin-top: 20px; }
+
+  .nextBtn {
+    position: absolute;
+    right: 80px;
+    bottom: 22px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 50px; }
+
+  .fa-forward {
+    position: relative;
+    top: 2px;
+    left: 2px;
+    color: #ccc; } }
+/*-------------------- show swap button --------------------*/
+.swap {
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #9D9DA1;
+  font-size: 2em; }
+  .swap span {
+    position: relative;
+    top: -3px; }
+
+/*-------------------- images partial -----------------------*/
+.slides {
+  width: 75%;
+  margin: 0 auto; }
+
+.view-icons {
+  width: 50px;
+  height: 40px;
+  position: relative;
+  left: 100px;
+  top: 90px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px; }
+
+.gallery-icon, .default-icon {
+  color: #9D9DA1;
+  position: relative;
+  left: 11px;
+  top: 8px; }
+
+.default-container {
+  display: none;
+  position: relative;
+  left: 2px; }
+
+.default-wrapper {
+  width: 74%;
+  margin: 0 auto; }
+  .default-wrapper .slides {
+    width: 100%;
+    margin-top: -20px; }
+
+.gallery-wrapper {
+  width: 1080px;
+  margin: 0 auto;
+  margin-top: -20px;
+  display: none; }
+  .gallery-wrapper .gallery-view {
+    width: 340px;
+    height: 198px;
+    float: left;
+    margin: 0 auto;
+    margin-left: 10px; }
+
+.open-menu, .close-menu {
+  position: absolute;
+  right: 30px;
+  top: 100px; }
+
+.close-menu-container {
+  display: none; }
+
+.sidemenu {
+  width: 200px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 140px;
+  right: 30px;
+  z-index: 10;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display: none; }
+  .sidemenu ul {
+    margin-top: 20px;
+    padding-left: 20px; }
+    .sidemenu ul li {
+      list-style: none; }
+
+/*------------------ Sound Manager 2 -----------------------*/
+.music-player {
+  position: relative; }
+
+#audiowrap {
+  width: 920px;
+  margin: 0 auto; }
+
+#audio1 {
+  width: 800px;
+  margin-top: 15px;
+  display: inline-block;
+  float: left; }
+
+#extraControls {
+  display: inline-block;
+  float: left;
+  margin-top: 15px; }
+  #extraControls #btnNext {
+    display: inline-block;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 6px;
+    margin-left: 5px;
+    height: 31px;
+    width: 100px;
+    border: none;
+    color: #ccc; }
+
+/*------------------ Media Form -----------------------*/
+.mediaForm {
+  background-color: #B4DFD2; }
+
+.topper {
+  padding-top: 25px;
+  padding-left: 60px; }
+
+.choose {
+  margin-top: 10px;
+  margin-left: 34px; }
+
+.radio {
+  width: 100px;
+  font-size: 1.5em; }
+
+.radMarg {
+  padding-left: 100px; }
+
+.radMarg input {
+  margin-top: 10px; }
+
+.formspace {
+  height: 50px; }
+
+#boxone {
+  border: none; }
+
+.col-md-6 {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 10px;
+  margin-bottom: 50px; }
+
+.buttonSub {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-top: 20px; }
+
+#botBoxContainer {
+  height: 400px; }
+  #botBoxContainer #bottomBox {
+    margin: 0 auto; }
+
+#bottomBox {
+  margin: 0 auto;
+  width: 500px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding-top: 15px;
+  padding-right: 20px;
+  padding-left: 20px; }
+
+.input input {
+  width: 553px;
+  height: 34px; }
+
+.inputbottom input {
+  width: 450px;
+  height: 34px; }
+
+.sub input {
+  width: 58px;
+  height: 26px;
+  border-radius: 5px; }
+
+/*--------------------- Edit User Page ------------------------*/
+.edit-form, .contact-form {
+  width: 550px;
+  margin: 0 auto;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 15px;
+  padding-top: 0;
+  margin-top: 40px; }
+
+/*---------------------- Contact Page ------------------------ */
+.contact-form {
+  margin-top: 100px; }
+
+#contact {
+  font-family: impact;
+  text-align: center;
+  margin-bottom: 40px; }
+
+.contact_email {
+  width: 300px;
+  color: #aaa; }
+
+.contact_comment {
+  width: 518px;
+  height: 150px; }
+
+.submit_button {
+  width: 100px; }
+
+/*# sourceMappingURL=main.css.map */

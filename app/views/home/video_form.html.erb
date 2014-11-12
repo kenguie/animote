@@ -1,0 +1,87 @@
+
+<body class="mediaForm">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="row clearfix">
+				<div class="col-md-6 column" id="boxone">
+					<h3 class="topper">
+						Enter your own media links here!
+					</h3>
+				</div>
+				<div class="col-md-6 column">
+				<h3 class="choose"> Please Choose an Emotion </h3>
+					<div class="radio">
+  						<label class="radMarg"><input type="radio" name="optradio">Happy</label>
+					</div>
+					<div class="radio">
+  						<label class="radMarg"><input type="radio" name="optradio">Sad</label>
+					</div>
+					<div class="radio">
+  						<label class="radMarg"><input type="radio" name="optradio">Angry</label>
+					</div>
+					<div class="radio">
+  						<label class="radMarg"><input type="radio" name="optradio">Calm</label>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-md-6 column">
+					<form role="form">
+						<div class="form-group">
+						<%= form_tag(home_video_success_path, method: :post) do %>
+							 <label for="Video Entry">Give your Video entry a title:</label>
+							 <span class="input"> <%= text_field_tag :name %> </span>
+						</div>
+						<div class="form-group">
+							 <label for="Video link">Enter a link for your Video file:</label> <br/>
+							 <span class="input"> <%= text_field_tag :file %> </span>
+						</div>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
+						<% end %>
+					</form>
+					<div class="formspace"></div>
+				</div>
+				<div class="col-md-6 column">
+					<form role="form">
+						<div class="form-group">
+							 <label for="Music Entry">Give your Music entry a title:</label>
+							 <span class="input"> <%= text_field_tag :name %> </span>
+						</div>
+						<div class="form-group">
+							 <label for="Music Link">Enter a link for your Music file:</label><br/>
+							 <span class="input"> <%= text_field_tag :file %> </span>
+						</div>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
+					</form>
+					<div class="formspace"></div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div id="botBoxContainer">
+				<div id="bottomBox">
+					<form role="form">
+						<div class="form-group">
+							 <label for="Image Entry">Give your Image entry a title:</label>
+							 <span class="inputbottom"> <%= text_field_tag :name %> </span>
+						</div>
+						<div class="form-group">
+							 <label for="Image link">Enter a link for your Image file:</label><br/>
+							 <span class="inputbottom"> <%= text_field_tag :file %> </span>
+						</div>
+						<div class="sub"> <%= submit_tag 'Submit' %> </div>
+					</form>
+					<div class="formspace"></div>
+				</div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
+
+
+

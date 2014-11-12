@@ -1,0 +1,42 @@
+<body class="render_page">  
+	<% if @emotion.name %> 
+ 
+		<% content_for :stylesheets do %>
+	  	.render_page {background-color: <%= @colors[rand(0..@colors.size-1)].hexcode %>; }
+		<% end %>      
+		<% if @selected == 'video' %>		
+			<%= render '/partials/video' %>
+		<% else @selected == 'music' %>
+			<%= render '/partials/images' %>
+		<% end %>  
+
+		<%= link_to emotion_media_path(@emotion.name, @alternate), method: :get do%>
+			<button class="swap"> 
+				<i class="fa fa-play"></i> <span>|</span>
+				<i class="fa fa-headphones"></i> 
+			</button>	
+		<% end %> 
+
+	<% else %>
+		<% redirect_to root_path %>
+	<% end %> 
+</body>  
+		
+ 
+<script type="text/javascript">
+	function randomColorGen()
+  {
+    var colors = '<%= @hexcodes %>'; 
+		colors = colors.split(',');
+    var color = colors[Math.floor(Math.random()* colors.length)]; 
+    return color;
+	}  
+ 
+ 	setInterval(function(){
+ 		$('.render_page').animate({backgroundColor: randomColorGen() }, 4000)
+ 	}, 4000);   
+</script>
+
+
+
+
