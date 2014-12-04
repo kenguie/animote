@@ -34,12 +34,12 @@ class HomeController < ApplicationController
     @images = find_images(@emotion.name) 
     @images_name = images_name(@images)  
      
-    if @selected == 'video'
-      @alternate = 'music'
-    elsif @selected == 'music'
-      @alternate = 'video'
-    else
-    end
+    # if @selected == 'video'
+    #   @alternate = 'music'
+    # elsif @selected == 'music'
+    #   @alternate = 'video'
+    # else
+    # end
   end 
  
  
