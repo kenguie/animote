@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0; }
 
+.render_page {
+  background-size: cover; }
+
 @media all and (min-width: 0px) {
   a {
     text-decoration: none;
@@ -393,5 +396,3 @@ body {
 
 .submit_button {
   width: 100px; }
-
-/*# sourceMappingURL=main.css.map */
