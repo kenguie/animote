@@ -26,17 +26,17 @@
       $('.gallery-icon').show();
     });
 
-    $('.open-menu').click(function(){
-      $('.sidemenu').show();
-      $('.open-menu').hide();
-      $('.close-menu-container').show();
-    });
+    // $('.open-menu').click(function(){
+    //   $('.sidemenu').show();
+    //   $('.open-menu').hide();
+    //   $('.close-menu-container').show();
+    // });
 
-    $('.close-menu-container').click(function(){
-      $('.sidemenu').hide();
-      $('.close-menu-container').hide();
-      $('.open-menu').show();
-    });
+    // $('.close-menu-container').click(function(){
+    //   $('.sidemenu').hide();
+    //   $('.close-menu-container').hide();
+    //   $('.open-menu').show();
+    // });
   });
 </script>
 
@@ -47,12 +47,15 @@
     <div class="default-container"><a href="#"><i class="fa fa-square fa-2x default-icon"></i></a></div>
   </div>
 
+  
+
   <div class="default-wrapper">
     <% if @emotion.name %>
-      <div class="slides default-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+      <div class="slides default-view"> 
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
     <% else %> 
       <!-- IMAGE NOT FOUND -->
@@ -62,49 +65,58 @@
   <% if @emotion.name %>
     <div class="gallery-wrapper"> 
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
       <div class="slides gallery-view">
-        <% find_images(@emotion.name).each do |image| %>
-          <img src =<%= image.file %>>
-        <% end %>
+        <% deck = @images.shuffle %>
+        <% deck.each do |card| %>
+          <img src =<%= card.file %>> 
+        <% end %> 
       </div>
     </div>
   <% else %> 

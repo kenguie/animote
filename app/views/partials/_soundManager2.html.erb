@@ -20,11 +20,7 @@
 
   var music_files = '<%= @music_file %>';
   music_files = music_files.split(','); 
-
-  // var music_names = '<%= @music_name %>';
-  // music_names = music_names.split(',');
-  // console.log(music_names);
-
+  
   tracks = [];
   for (var i = music_files.length - 1; i >= 0; i--) {
     tracks.push({"track":i, "file":music_files[i]});
@@ -34,6 +30,7 @@
       var supportsAudio = !!document.createElement('audio').canPlayType;
       if(supportsAudio) {
           var index = Math.floor(Math.random()*music_files.length),
+          oldIndex = Math.floor(Math.random()*music_files.length)
           playing = true;
           mediaPath = src='https://s3.amazonaws.com/emotionsproject/<%= @emotion.name%>+songs/', 
           tracks,
@@ -48,14 +45,13 @@
               npAction.text('Paused:');
           }).bind('ended', function() {
               npAction.text('');
+              //checks for last song
               if((index + 1) < trackCount) {
-                  index = Math.floor(Math.random()*music_files.length);
-                  loadTrack(index);
+                  loadTrack(getIndex(index));
                   audio.play();
               } else {
-                  audio.pause();
-                  index = Math.floor(Math.random()*music_files.length);
-                  loadTrack(index);
+                  audio.pause();  
+                  loadTrack(getIndex(index));
               }
           }).get(0),
           btnPrev = $('#btnPrev').click(function() {
@@ -66,22 +62,19 @@
                       audio.play();
                   }
               } else {
-                  audio.pause();
-                  index = 0;
-                  loadTrack(index);
+                  audio.pause(); 
+                  loadTrack(0);
               }
           }),
           btnNext = $('#btnNext').click(function() {
-              if((index + 1) < trackCount) {
-                  index = Math.floor(Math.random()*music_files.length);
-                  loadTrack(index);
+              if((index + 1) < trackCount) { 
+                  loadTrack(getIndex(index));
                   if(playing) {
                       audio.play();
                   }
               } else {
-                  audio.pause();
-                  index = Math.floor(Math.random()*music_files.length);
-                  loadTrack(index);
+                  audio.pause(); 
+                  loadTrack(getIndex(index));
               }
           }),
           li = $('#plUL li').click(function() {
@@ -90,6 +83,15 @@
                   playTrack(id);
               }
           }),
+          getIndex = function(index) {
+              //prevents hearing the same song twice in a row
+              oldIndex = index;
+              index = Math.floor(Math.random()*music_files.length);
+              while( oldIndex == index ){
+                index = Math.floor(Math.random()*music_files.length); 
+              } 
+              return index; 
+          },
           loadTrack = function(id) {
               $('.plSel').removeClass('plSel');
               $('#plUL li:eq(' + id + ')').addClass('plSel');

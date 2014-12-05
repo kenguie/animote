@@ -34,9 +34,9 @@ class ApplicationController < ActionController::Base
     return imgs
 	end
 
-	def images_name(music_collection)
+	def images_name(image_collection)
 		array = []
-		music_collection.each do |image|
+		image_collection.each do |image|
   		array << image.name
 		end
 
