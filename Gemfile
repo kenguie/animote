@@ -8,9 +8,9 @@ group :development, :test do
   gem 'sqlite3', '1.3.10' 
 end
 
-group :production do
+group :production do 
 	#turn on prostgresql to seed
-	# gem 'pg'
+	# gem 'pg' 
 	gem 'rails_12factor'
 end
 
