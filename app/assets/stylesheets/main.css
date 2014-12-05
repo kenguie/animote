@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: whitesmoke; }
 
 .render_page {
   background-size: cover; }
@@ -89,7 +90,7 @@ body {
         background-color: #A612FF; }
     .home_index .hit_button:hover {
       background-color: #7D54FF; } }
-@media all and (min-width: 1200px) {
+@media all and (min-width: 481px) {
   .main-nav ul .dropdown-menu .sign_in, .main-nav ul .dropdown-menu .sign_up {
     width: 200px;
     height: auto;
@@ -111,7 +112,7 @@ body {
 
   .main-nav {
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5); 
     font-size: 1.5em;
     margin: 0 auto;
     padding-left: 0;
