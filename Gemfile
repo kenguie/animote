@@ -9,6 +9,7 @@ group :development, :test do
 end
 
 group :production do
+	#turn on postgres
 	gem 'pg'
 	gem 'rails_12factor'
 end
