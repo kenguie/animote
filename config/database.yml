@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 #
 
-host: production
+# host: production
 
 default: &default
   adapter: postgresql
