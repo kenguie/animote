@@ -10,7 +10,7 @@ end
 
 group :production do 
 	#turn on prostgresql to seed
-	gem 'pg' 
+	#gem 'pg' 
 	gem 'rails_12factor'
 end
 
