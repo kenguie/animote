@@ -13,6 +13,18 @@
   <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
     
   <%= csrf_meta_tags %> 
+  
+    <!-- Mezzobit -->
+  <script async="1">
+    (function() {
+      __mtm = [ '548f0b70cd947fad4f28bff5', 'd36wtdrdo22bqa.cloudfront.net/mngr', 'tdi.mezzobit.com' ];
+      var s = document.createElement('script');
+      s.async = 1;
+      s.src = '//' + __mtm[1] + '/mtm.js';
+      var e = document.getElementsByTagName('script')[0];
+      (e.parentNode || document.body).insertBefore(s, e);
+    })();
+  </script>
 
 </head>
 <body>
@@ -27,7 +39,7 @@
 
   <%= yield %>
 
-  <%= render "shared/footer" %>
+   <!-- render "shared/footer"  -->
 
 </body>
 </html>
